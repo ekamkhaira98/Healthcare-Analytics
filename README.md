@@ -1,6 +1,8 @@
 # Healthcare-Analytics
 
 ## Research
+
+![My Image](abcd.png)
 Conduct analysis on the hospital data and better understand relation of 
 various factors in a patient condition . Visualization and inferences from data help in understanding 
 characteristics of diseases. Our purpose revolves around understanding the condition of any patient 
