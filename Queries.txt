@@ -1,0 +1,27 @@
+Employment vs number of Patients and vs Patients who have mental illness-
+SELECT e.Status as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Employment e ON p.EmploymentID = e.EmploymentID GROUP BY e.Status
+SELECT e.Status as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Employment e ON p.EmploymentID = e.EmploymentID where p.illnessid=1 GROUP BY e.Status
+
+Education vs number of Patients and vs Patients who have mental illness-
+SELECT e.Status as Education, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Education e ON p.EducationID = e.EducationID GROUP BY e.Status
+SELECT e.Status as Education, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Education e ON p.EducationID = e.EducationID where p.illnessid=1 GROUP BY e.Status
+
+Household vs number of patients and vs Patients who have mental illness-
+SELECT h.composition as Household_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Household h ON p.HouseID = h.HouseID GROUP BY h.Composition
+SELECT h.composition as Household_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN Household h ON p.HouseID = h.HouseID where p.illnessid=1 GROUP BY h.Composition
+
+Gender vs number of Patients and vs Patients who have mental illness-
+SELECT s.sexvalue as Gender, COUNT(p.PatientID) as COUNT FROM Patients p JOIN SexTable s ON p.SexID = s.sexid GROUP BY s.sexvalue
+SELECT s.sexvalue as Gender, COUNT(p.PatientID) as COUNT FROM Patients p JOIN SexTable s ON p.SexID = s.sexid where p.illnessid=1 GROUP BY s.sexvalue 
+
+LivingSituation vs number of Patients and vs Patients who have mental illness-
+SELECT l.Situation as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN LivingSit l ON p.LivingID = l.LivingID GROUP BY l.Situation
+SELECT l.Situation as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN LivingSit l ON p.LivingID = l.LivingID where p.illnessid=1 GROUP BY l.Situation
+
+Region vs number of Patients and vs Patients who have mental illness-
+SELECT r.Region as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN RegionsServed r ON p.RegionID = r.RegionID GROUP BY r.Region
+SELECT r.Region as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN RegionsServed r ON p.RegionID = r.RegionID where p.illnessid=1 GROUP BY r.Region
+
+ProgramCategory vs number of Patients and vs Patients who have mental illness-
+SELECT r.Program as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN ProgramCategory r ON p.ProgramID = r.ProgramID GROUP BY r.Program
+SELECT r.Program as Employment_Type, COUNT(p.PatientID) as COUNT FROM Patients p JOIN ProgramCategory r ON p.ProgramID = r.ProgramID where p.illnessid=1 GROUP BY r.Program
